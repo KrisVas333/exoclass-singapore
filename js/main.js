@@ -45,15 +45,15 @@
 
   // ---------- providers by category (only names on the public exoclass.lt/exoclass-partneriai list) ----------
   var P = {
-    dance: ['SKILLZ', 'DEMO šokių studija', 'MG šokių studija', 'Lietuvos tarptautinė baleto akademija', 'Šokio harmonija', 'Rai Academy', 'Agnės Kavaliauskaitės šokių studija', 'Follow me', 'Šok šok', 'Modus Dance', 'Šokių studija „Pase“', 'Hooo šokių studija', 'Vip mokykla', 'Neli Beliakaitės Baltijos baleto akademija', 'Šokio namai „Špagatas“'],
+    dance: ['DEMO šokių studija', 'MG šokių studija', 'Lietuvos tarptautinė baleto akademija', 'Šokio harmonija', 'Rai Academy', 'Agnės Kavaliauskaitės šokių studija', 'Follow me', 'Šok šok', 'Modus Dance', 'Šokių studija „Pase“', 'Hooo šokių studija', 'Vip mokykla', 'Neli Beliakaitės Baltijos baleto akademija', 'Šokio namai „Špagatas“'],
     sport: ['Kūdikių ir vaikų gimnastikos mokykla', 'Gero vėjo klubas', 'Atrask sportą', 'Sporto galia', 'Gymland', 'Vaikų lavinimo akademija', 'DSR sporto klubas', 'Sumanus žiogas', 'Oro akrobatikos studija „Delarija“'],
     basket: ['Krepšinio mokykla „Snaiperis“', 'Krepšinio akademija „Saulė“'],
     foot: ['Talentų futbolo akademija'],
-    stem: ['Robotikos Akademija*', 'LINEŠA', 'Jaunųjų mokslininkų akademija', 'Robotics & AI club', 'BrAIn club*', 'Naujos kartos kompiuterių mokykla'],
+    stem: ['Robotikos Akademija*', 'Jaunųjų mokslininkų akademija', 'Robotics & AI club', 'BrAIn club*', 'Naujos kartos kompiuterių mokykla'],
     think: ['EIQ akademija', 'Laikas kartu'],
     lang: ['Išminties kristalas', 'Šiaurės kryptimi', 'Helen Doron'],
     model: ['DuoKidz', 'MPodiumas', 'CatWalk'],
-    arts: ['ADI keramika', 'Meninio ugdymo studija „Spalvoti sapnai“', 'Muzikutis', 'Paupio Molynė', 'Muzikali Lapė'],
+    arts: ['ADI keramika', 'Meninio ugdymo studija „Spalvoti sapnai“', 'Muzikutis', 'Muzikali Lapė'],
     martial: ['Kyokushin karate klubas TOSHI', 'Kyokushin karate mokykla SHIN', 'Kapoeristas'],
     tennis: ['Riešės teniso mokykla', 'Teniso akademija „Septyni Šeši“', 'Mostai', 'Play Date']
   };
