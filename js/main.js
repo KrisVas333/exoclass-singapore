@@ -5,7 +5,7 @@
   // ---------- config ----------
   // TODO(Neuron/Kris): create a Microsoft Clarity project "ExoClass Singapore" (Strict masking) and paste its id here.
   // While empty, Clarity never loads and the consent banner stays hidden (nothing to consent to).
-  var CLARITY_ID = '';
+  var CLARITY_ID = 'y4gk0je1j0';
   var CONSENT_KEY = 'exo-sg-consent-v1';
   var MAIL_SUBJECT = 'ExoClass × Singapore';
   var MAIL = { kris: 'kris@exoclass.lt', lukas: 'lukas@exoclass.lt' };
