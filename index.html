@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ExoClass × Singapore</title>
+<meta name="description" content="ExoClass runs registration, payments, invoices and attendance for after-school providers. 70+ providers, 20,000+ children. Meet the founders in Singapore, 25–30 Oct 2026.">
+<meta name="theme-color" content="#AE4197">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ExoClass × Singapore · after-school, ready for AI agents">
+<meta property="og:description" content="Registration, payments, invoices and attendance in one system. 70+ providers · 20,000+ children. Meet us in Singapore, 25–30 Oct.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- Rule 16 · cookieless anonymous event tracker (no cookies, no personal data) -->
+<script defer src="https://krisvas333.github.io/neuron-ar/track.js" data-brand="exoclass" data-artifact="singapore" data-kind="landing"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="js/main.js"></script>
+</head>
+<body>
+
+<!-- icon sprite (inline SVG, no emoji) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="exg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3097D7"/><stop offset="1" stop-color="#AE4197"/></linearGradient>
+  </defs>
+  <symbol id="i-dance" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M12 6v6l-4 4-1 4M12 12l4 3 1 5M7 9l5-1 5-3"/></symbol>
+  <symbol id="i-gym" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M4 19c3-8 13-8 16 0M12 7v5M8 10l4 2 4-2"/></symbol>
+  <symbol id="i-basket" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18M5.6 5.6c3 3 3 9.8 0 12.8M18.4 5.6c-3 3-3 9.8 0 12.8"/></symbol>
+  <symbol id="i-foot" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.8 2.8-1.4 4.4H9.6l-1.4-4.4z"/></symbol>
+  <symbol id="i-stem" viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="2"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16h6M3 13v2M21 13v2"/></symbol>
+  <symbol id="i-think" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+  <symbol id="i-model" viewBox="0 0 24 24"><path d="M10 6a2 2 0 1 1 2.6 1.9c-.4.1-.6.5-.6.9V10L3 17h18l-9-7"/></symbol>
+  <symbol id="i-arts" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 2-2s-1-1.5-1-2.5S14 15 15 15h2a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></symbol>
+  <symbol id="i-martial" viewBox="0 0 24 24"><path d="M3 10h18v4H3zM10 14l-3 7M14 14l3 7"/></symbol>
+  <symbol id="i-tennis" viewBox="0 0 24 24"><circle cx="10" cy="9" r="6"/><path d="M14.3 13.3L21 20M6 5l8 8M4.5 9h11"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-form" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.6-1-1.7-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.3 0-2.4-.5-3-1.5M12 6v2M12 16v2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5a3 3 0 0 1 0 6M21 20c0-2.6-1.6-4.9-4-5.7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9c0 3 3 6 6 6l1-1.5-2-1-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1-2z"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <a class="brand" href="#hero" aria-label="ExoClass home"><img src="assets/img/exoclass-logo.svg" alt="ExoClass" width="150" height="27"></a>
+  <span class="top-pill"><svg class="ic"><use href="#i-pin"/></svg>Singapore · 25–30 Oct</span>
+  <a class="btn btn-sm" data-cta="header_book" data-mail="call" href="#">Book 20 min</a>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span>Partner brief · Singapore 2026</p>
+      <h1 class="h1"><span class="ln">After-school activities,</span> <span class="ln grad">ready for the age of AI&nbsp;agents.</span></h1>
+      <p class="lead">One system runs registration, payments, invoices and attendance. Coaches coach. Parents say yes in a few taps.</p>
+      <div class="cta-row">
+        <a class="btn" data-cta="hero_book" data-mail="call" href="#"><svg class="ic"><use href="#i-cal"/></svg>Book a 20-min call</a>
+        <a class="btn btn-ghost" data-cta="hero_see" href="#product">See it work<svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="faces">
+        <img src="assets/img/kris.webp" alt="Kris Vasiliauskas" width="56" height="56">
+        <img src="assets/img/lukas.webp" alt="Džiugas Lukas Eidukas" width="56" height="56">
+        <p><b>Kris &amp; Lukas are in Singapore</b><br>25–30 October. The people who built it.</p>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-label="ExoClass live demo booking widget on a phone">
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen"><img class="phone-shot" src="assets/img/live-widget-mobile.webp" alt="ExoClass live demo booking widget in English, demo data" width="500" height="1080"></div>
+      </div>
+      <div class="float f1"><span class="fi ok"><svg class="ic"><use href="#i-check"/></svg></span><span><b>Invoice paid</b><small>October · €55.00</small></span></div>
+      <div class="float f2"><span class="fi"><svg class="ic"><use href="#i-users"/></svg></span><span><b>14 / 14 present</b><small>Robotics · Thu 15:30</small></span></div>
+      <div class="float f3"><span class="fi"><svg class="ic"><use href="#i-cal"/></svg></span><span><b>Spot confirmed</b><small>Ballet · trial lesson</small></span></div>
+      <p class="tag tag-live">Live demo widget · demo data<span> · overlays illustrative</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NUMBERS ============ -->
+<section class="nums" aria-label="ExoClass in numbers">
+  <div class="wrap nums-grid">
+    <div class="num"><b data-count="70" data-suffix="+">70+</b><span>activity providers</span></div>
+    <div class="num"><b data-count="20000" data-suffix="+">20,000+</b><span>children managed</span></div>
+    <div class="num"><b data-count="650" data-suffix="+">650+</b><span>venues Robotics Academy runs on ExoClass</span></div>
+    <div class="num"><b data-count="80" data-suffix="%+">80%+</b><span>invoices paid in the first week</span></div>
+  </div>
+  <p class="wrap nums-note">Built inside Robotics Academy since 2021 · open to all providers since 2023</p>
+</section>
+
+<!-- ============ CATEGORY MARQUEE ============ -->
+<section class="marquee" aria-label="Activity categories on ExoClass">
+  <div class="mq-track">
+    <ul class="mq-row">
+      <li><svg class="ic"><use href="#i-dance"/></svg>Dance</li>
+      <li><svg class="ic"><use href="#i-gym"/></svg>Gymnastics</li>
+      <li><svg class="ic"><use href="#i-basket"/></svg>Basketball</li>
+      <li><svg class="ic"><use href="#i-foot"/></svg>Football</li>
+      <li><svg class="ic"><use href="#i-stem"/></svg>STEM &amp; robotics</li>
+      <li><svg class="ic"><use href="#i-think"/></svg>Thinking skills</li>
+      <li><svg class="ic"><use href="#i-lang"/></svg>Languages</li>
+      <li><svg class="ic"><use href="#i-model"/></svg>Modelling</li>
+      <li><svg class="ic"><use href="#i-arts"/></svg>Arts &amp; crafts</li>
+      <li><svg class="ic"><use href="#i-music"/></svg>Music</li>
+      <li><svg class="ic"><use href="#i-martial"/></svg>Martial arts</li>
+      <li><svg class="ic"><use href="#i-tennis"/></svg>Tennis &amp; padel</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PROBLEM / MISSION ============ -->
+<section class="sec problem" id="why">
+  <div class="wrap">
+    <p class="kicker">The problem</p>
+    <h2 class="h2">Screens are one tap away.<br><span class="muted">Real life is ten forms away.</span></h2>
+    <div class="versus">
+      <div class="vs-card vs-screen">
+        <svg class="vs-ic"><use href="#i-phone"/></svg>
+        <p class="vs-big">1 tap</p>
+        <p class="vs-sm">to another hour of scrolling</p>
+      </div>
+      <div class="vs-card vs-real">
+        <div class="forms" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <p class="vs-big"><span class="strike">10 forms</span> <span class="grad">1 page</span></p>
+        <p class="vs-sm">to a coach, a team, a stage or a robot, with ExoClass</p>
+      </div>
+    </div>
+    <div class="mission">
+      <p class="kicker">Our mission</p>
+      <p class="mission-line">Make real life more interesting than screens.</p>
+      <p class="mission-sub">After-school activities are the antidote to the 21st-century unhealthy relationship with technology. We remove the friction between a child and the activity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCT FLOW ============ -->
+<section class="sec product" id="product">
+  <div class="wrap">
+    <p class="kicker">How it works</p>
+    <h2 class="h2">From sign-up to paid.<br><span class="muted">No calls, no chasing.</span></h2>
+    <p class="tag tag-illus">Illustrative mock-ups · not real client data</p>
+    <ol class="flow">
+      <li class="step">
+        <span class="step-n">1</span><p class="step-t">Parent books</p>
+        <div class="mock">
+          <div class="m-card"><span class="m-thumb t-blue"><svg class="ic"><use href="#i-dance"/></svg></span><span><b>Ballet · age 6–8</b><small>Thu 16:00 · 2 spots left</small></span></div>
+          <div class="m-btn">Book a trial</div>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-n">2</span><p class="step-t">Pays by card</p>
+        <div class="mock">
+          <div class="m-field"><small>Monthly plan</small><b>€55.00</b></div>
+          <div class="m-field m-card-no"><small>Card</small><b>•••• 4242</b></div>
+          <div class="m-btn">Pay</div>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-n">3</span><p class="step-t">Invoice settles itself</p>
+        <div class="mock">
+          <div class="m-inv"><small>Invoice · October</small><b>€55.00</b><span class="stamp">PAID</span></div>
+          <div class="m-line"><svg class="ic"><use href="#i-mail"/></svg>Reminder skipped, already paid</div>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-n">4</span><p class="step-t">Coach marks attendance</p>
+        <div class="mock">
+          <ul class="m-att">
+            <li><span class="av">A</span>Child A<svg class="ic tick"><use href="#i-check"/></svg></li>
+            <li><span class="av">B</span>Child B<svg class="ic tick"><use href="#i-check"/></svg></li>
+            <li><span class="av">C</span>Child C<svg class="ic tick"><use href="#i-check"/></svg></li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+
+    <figure class="browser">
+      <div class="browser-bar"><i></i><i></i><i></i><span>Booking page embedded on a provider's own website</span></div>
+      <img src="assets/img/live-widget-desktop.webp" alt="ExoClass live demo booking widget in English with four demo classes" width="1280" height="608" loading="lazy">
+      <figcaption class="tag tag-live">Live demo widget · real product, demo data</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD ASSEMBLY ============ -->
+<section class="sec dash" id="platform">
+  <div class="wrap">
+    <p class="kicker">One platform</p>
+    <h2 class="h2">Everything a provider runs.<br><span class="muted">In one place.</span></h2>
+    <div class="board">
+      <div class="board-head"><img src="assets/img/exoclass-logo.svg" alt="" width="110" height="20"><span>Provider dashboard</span></div>
+      <ul class="chips">
+        <li><svg class="ic"><use href="#i-form"/></svg>Online registration</li>
+        <li><svg class="ic"><use href="#i-coin"/></svg>Card payments</li>
+        <li><svg class="ic"><use href="#i-form"/></svg>Auto-invoices</li>
+        <li><svg class="ic"><use href="#i-mail"/></svg>Payment reminders</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Attendance</li>
+        <li><svg class="ic"><use href="#i-cal"/></svg>Groups &amp; schedules</li>
+        <li><svg class="ic"><use href="#i-users"/></svg>Parent portal</li>
+        <li><svg class="ic"><use href="#i-users"/></svg>Staff &amp; payroll</li>
+        <li><svg class="ic"><use href="#i-form"/></svg>E-signed contracts</li>
+        <li><svg class="ic"><use href="#i-coin"/></svg>Discount codes</li>
+        <li><svg class="ic"><use href="#i-think"/></svg>Live analytics</li>
+        <li><svg class="ic"><use href="#i-coin"/></svg>State funding schemes <small>(Lithuania)</small></li>
+        <li class="chip-soft"><svg class="ic"><use href="#i-chat"/></svg>ExoSend email &amp; SMS <small>(limited release)</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOCIAL PROOF (interactive) ============ -->
+<section class="sec proof" id="clients">
+  <div class="wrap">
+    <p class="kicker">How clients react</p>
+    <h2 class="h2">Every kind of activity.<br><span class="muted">One system.</span></h2>
+    <div class="tabs" role="tablist" aria-label="Filter by activity">
+      <button role="tab" aria-selected="true" data-cat="all">All</button>
+      <button role="tab" aria-selected="false" data-cat="dance"><svg class="ic"><use href="#i-dance"/></svg>Dance</button>
+      <button role="tab" aria-selected="false" data-cat="sport"><svg class="ic"><use href="#i-gym"/></svg>Gymnastics &amp; sport</button>
+      <button role="tab" aria-selected="false" data-cat="basket"><svg class="ic"><use href="#i-basket"/></svg>Basketball</button>
+      <button role="tab" aria-selected="false" data-cat="foot"><svg class="ic"><use href="#i-foot"/></svg>Football</button>
+      <button role="tab" aria-selected="false" data-cat="stem"><svg class="ic"><use href="#i-stem"/></svg>STEM &amp; robotics</button>
+      <button role="tab" aria-selected="false" data-cat="think"><svg class="ic"><use href="#i-think"/></svg>Thinking</button>
+      <button role="tab" aria-selected="false" data-cat="lang"><svg class="ic"><use href="#i-lang"/></svg>Languages</button>
+      <button role="tab" aria-selected="false" data-cat="model"><svg class="ic"><use href="#i-model"/></svg>Modelling</button>
+      <button role="tab" aria-selected="false" data-cat="arts"><svg class="ic"><use href="#i-arts"/></svg>Arts, crafts &amp; music</button>
+      <button role="tab" aria-selected="false" data-cat="martial"><svg class="ic"><use href="#i-martial"/></svg>Martial arts</button>
+      <button role="tab" aria-selected="false" data-cat="tennis"><svg class="ic"><use href="#i-tennis"/></svg>Tennis</button>
+    </div>
+
+    <div class="providers" aria-live="polite">
+      <p class="prov-label">Providers on ExoClass <span id="provCount"></span></p>
+      <ul class="prov-list" id="provList"></ul>
+    </div>
+
+    <div class="quotes" id="quotes">
+      <article class="q" data-cats="sport">
+        <img src="assets/img/t-monika.webp" alt="Monika Kvietkutė-Greimienė" width="72" height="72" loading="lazy">
+        <p class="q-hl">“We have completely resolved the issue of group registration”</p>
+        <p class="q-who"><b>Monika Kvietkutė-Greimienė</b>Owner · Gymnastics School for Babies and Children</p>
+        <span class="q-cat"><svg class="ic"><use href="#i-gym"/></svg>Gymnastics</span>
+        <details><summary>Full quote</summary><p>"We have completely resolved the issue of group registration, significantly reducing calls and emails with questions like 'How do I register? Where do I pay? Is there space in the group?'. What impresses me most is that whenever a problem arises, support is always available immediately—helpful, sincere, and providing clear, practical advice."</p></details>
+      </article>
+      <article class="q" data-cats="dance">
+        <img src="assets/img/t-deimante.webp" alt="Deimantė Ūsienė" width="72" height="72" loading="lazy">
+        <p class="q-hl">“quick to resolve problems and is available at any time of the day”</p>
+        <p class="q-who"><b>Deimantė Ūsienė</b>Owner · DEMO Dance</p>
+        <span class="q-cat"><svg class="ic"><use href="#i-dance"/></svg>Dance</span>
+        <details><summary>Full quote</summary><p>"We are very happy that Exoclass is quick to resolve problems and is available at any time of the day. We are happy to discover new possibilities for dance studio management to work faster and more efficiently!"</p></details>
+      </article>
+      <article class="q" data-cats="sport basket foot">
+        <img src="assets/img/t-mindaugas.webp" alt="Mindaugas Valackonis" width="72" height="72" loading="lazy">
+        <p class="q-hl">“by far the most practical for sports clubs”</p>
+        <p class="q-who"><b>Mindaugas Valackonis</b>Deputy Director · KGYM</p>
+        <span class="q-cat"><svg class="ic"><use href="#i-gym"/></svg>Sports club</span>
+        <details><summary>Full quote</summary><p>"We highly recommend EXOCLASS. We’ve tried other systems, but this one is by far the most practical for sports clubs. Managing training groups, club registration and collecting payments has transformed our work!"</p></details>
+      </article>
+      <article class="q" data-cats="sport basket foot">
+        <img src="assets/img/t-evelina-j.webp" alt="The Power of Sport team" width="72" height="72" loading="lazy">
+        <p class="q-hl">“significantly simplified our organizational processes”</p>
+        <p class="q-who"><b>Evelina Jotkevičiūtė</b>Project manager · The Power of Sport (Sporto Galia)</p>
+        <span class="q-cat"><svg class="ic"><use href="#i-basket"/></svg>Children's sports club</span>
+        <details><summary>Full quote</summary><p>"Our experience with EXOCLASS has been extremely positive – the system has significantly simplified our organizational processes and increased work efficiency. The most frequently used features are sending and adjusting invoices, tracking attendance, and monitoring statistics and analytics."</p></details>
+      </article>
+      <article class="q q-fact" data-cats="stem">
+        <span class="fact-ic"><svg class="ic"><use href="#i-stem"/></svg></span>
+        <p class="q-hl">Robotics Academy runs 650+ venues on ExoClass.</p>
+        <p class="q-who"><b>Robotics Academy</b>Robotics &amp; STEM network · Lithuania</p>
+        <span class="q-disc">Founder-related company: ExoClass was built inside Robotics Academy.</span>
+      </article>
+      <article class="q" data-cats="stem">
+        <img src="assets/img/t-laszlo.webp" alt="László Békéssy" width="72" height="72" loading="lazy">
+        <p class="q-hl">“Exoclass solved all our squad management problems.”</p>
+        <p class="q-who"><b>László Békéssy</b>CTO · Steam Academy</p>
+        <span class="q-cat"><svg class="ic"><use href="#i-stem"/></svg>Robotics · multi-country</span>
+        <details><summary>Full quote</summary><p>"Exoclass is our core solution for managing robotics teams. With a very complex multi-country and multi-continent structure, we struggled to find a supplier to meet our needs, but Exoclass solved all our squad management problems."</p></details>
+      </article>
+      <article class="q" data-cats="think">
+        <img src="assets/img/t-ligita.webp" alt="Ligita Pareigienė" width="72" height="72" loading="lazy">
+        <p class="q-hl">“has also improved the quality of customer service”</p>
+        <p class="q-who"><b>Ligita Pareigienė</b>Owner · Time Together (Laikas Kartu)</p>
+        <span class="q-cat"><svg class="ic"><use href="#i-think"/></svg>Thinking &amp; detective club</span>
+        <details><summary>Full quote</summary><p>"The Exoclass system has not only made it easier for our organisation to administer its activities, but has also improved the quality of customer service. We are happy to be working with a team that is always striving for improvement, and we are happy to hear about future updates and even more user-friendly functionalities for both us and our customers."</p></details>
+      </article>
+      <article class="q" data-cats="model">
+        <img src="assets/img/t-diana.webp" alt="Diana Balaišytė" width="72" height="72" loading="lazy">
+        <p class="q-hl">“It’s a win-win situation, saving us and the parents time.”</p>
+        <p class="q-who"><b>Diana Balaišytė</b>Owner · DuoKidz</p>
+        <span class="q-cat"><svg class="ic"><use href="#i-model"/></svg>Modelling school</span>
+        <details><summary>Full quote</summary><p>"In the past, we spent several additional hours on administrative tasks. I feel more relaxed knowing Exoclass handles client registration, communication, and payment collection. It’s a win-win situation, saving us and the parents time."</p></details>
+      </article>
+    </div>
+    <p class="q-empty" id="qEmpty" hidden>No published quote from this category yet. Ask us for a reference call.</p>
+    <p class="src-note">Quotes as published on exoclass.io. No star ratings: we show what clients said.</p>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="sec videos" id="video">
+  <div class="wrap">
+    <p class="kicker">Watch</p>
+    <h2 class="h2">See it. Hear it from a client.</h2>
+    <div class="vid-grid">
+      <figure class="vid">
+        <!-- SWAP: put the MP4 URL in src="" below. Poster card hides automatically. -->
+        <video id="explainer" src="" poster="assets/img/video-poster.svg" controls playsinline preload="none" hidden></video>
+        <div class="vid-soon" id="explainerSoon">
+          <span class="play-ring"><svg class="ic"><use href="#i-play"/></svg></span>
+          <b>ExoClass in 70 seconds</b>
+          <span>English · video coming 24 Oct</span>
+        </div>
+        <figcaption>Product walkthrough (English)</figcaption>
+      </figure>
+      <figure class="vid">
+        <button class="yt" type="button" data-yt="yrYXZMUjzas" aria-label="Play client video: Laikas Kartu detective club">
+          <img src="assets/img/yt-ligita-poster.webp" alt="" width="480" height="360" loading="lazy">
+          <span class="play-ring"><svg class="ic"><use href="#i-play"/></svg></span>
+        </button>
+        <figcaption>Client story: Laikas Kartu detective club · 35 s · in Lithuanian</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AGENTS ROADMAP ============ -->
+<section class="sec agents" id="agents">
+  <div class="wrap">
+    <p class="kicker">What's next</p>
+    <h2 class="h2">AI agents for the busywork.</h2>
+    <p class="tag tag-road">Roadmap · in development · not shipped yet</p>
+    <div class="agent-grid">
+      <article class="agent">
+        <p class="agent-t"><svg class="ic"><use href="#i-chat"/></svg>Parent-question agent</p>
+        <div class="bub in">Is there space on Thursday?</div>
+        <div class="bub out">Yes, 2 spots in Ballet 16:00. Book a trial?</div>
+      </article>
+      <article class="agent">
+        <p class="agent-t"><svg class="ic"><use href="#i-coin"/></svg>Payments agent</p>
+        <div class="bub out">3 invoices overdue. Reminders sent.</div>
+        <div class="bub out ok">2 paid this morning.</div>
+      </article>
+      <article class="agent">
+        <p class="agent-t"><svg class="ic"><use href="#i-users"/></svg>Group-filling agent</p>
+        <div class="bar-fill"><span style="--to:.75"></span><b>Robotics Thu · 9 / 12</b></div>
+        <div class="bub out">Invite sent to past trial families.</div>
+      </article>
+    </div>
+    <p class="src-note">Illustrative concepts. Build partners in Singapore shape what ships first.</p>
+  </div>
+</section>
+
+<!-- ============ FOUNDERS ============ -->
+<section class="sec founders" id="founders">
+  <div class="wrap founders-grid">
+    <figure class="illus">
+      <img src="assets/img/founders-illustration.webp" alt="Illustration of the three ExoClass founders" width="1000" height="820" loading="lazy">
+    </figure>
+    <div>
+      <p class="kicker">Built by operators</p>
+      <h2 class="h2">The people who built it<br><span class="grad">are here with you.</span></h2>
+      <p class="pin-line"><svg class="ic"><use href="#i-pin"/></svg>Singapore · 25–30 October 2026</p>
+      <div class="people">
+        <div class="person">
+          <img src="assets/img/kris.webp" alt="Kris Vasiliauskas" width="88" height="88" loading="lazy">
+          <p><b>Kris Vasiliauskas</b>Chief Evangelist &amp; co-founder</p>
+          <span class="here">In Singapore</span>
+        </div>
+        <div class="person">
+          <img src="assets/img/lukas.webp" alt="Džiugas Lukas Eidukas" width="88" height="88" loading="lazy">
+          <p><b>Džiugas Lukas Eidukas</b>Co-founder &amp; COO</p>
+          <span class="here">In Singapore</span>
+        </div>
+        <div class="person">
+          <span class="initials" aria-hidden="true">LK</span>
+          <p><b>Linas Kiguolis</b>CEO</p>
+        </div>
+      </div>
+      <p class="founders-note">We run after-school activities ourselves. ExoClass grew out of Robotics Academy's own operations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS + CONTACT ============ -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <p class="kicker kicker-w">Partnerships in Singapore</p>
+    <h2 class="h2 h2-w">Let's bring real-world activities into the AI era. Together.</h2>
+    <div class="ptypes">
+      <div class="pt"><svg class="ic"><use href="#i-think"/></svg><b>Enrichment centres</b><span>Run your centre on ExoClass</span></div>
+      <div class="pt"><svg class="ic"><use href="#i-dance"/></svg><b>Activity providers</b><span>Sport, dance, STEM, languages, arts</span></div>
+      <div class="pt"><svg class="ic"><use href="#i-users"/></svg><b>Distributors</b><span>Bring ExoClass to your network</span></div>
+    </div>
+    <div class="contact-grid">
+      <div class="ccard">
+        <img src="assets/img/kris.webp" alt="" width="64" height="64" loading="lazy">
+        <p><b>Kris Vasiliauskas</b>Chief Evangelist &amp; co-founder</p>
+        <a class="btn btn-w" data-cta="mail_kris" data-mail="kris" href="mailto:kris@exoclass.lt?subject=ExoClass%20%C3%97%20Singapore"><svg class="ic"><use href="#i-mail"/></svg>kris@exoclass.lt</a>
+      </div>
+      <div class="ccard">
+        <img src="assets/img/lukas.webp" alt="" width="64" height="64" loading="lazy">
+        <p><b>Džiugas Lukas Eidukas</b>Co-founder &amp; COO</p>
+        <a class="btn btn-w" data-cta="mail_lukas" data-mail="lukas" href="mailto:lukas@exoclass.lt?subject=ExoClass%20%C3%97%20Singapore"><svg class="ic"><use href="#i-mail"/></svg>lukas@exoclass.lt</a>
+      </div>
+    </div>
+    <div class="cta-row cta-center">
+      <a class="btn btn-big" data-cta="contact_book" data-mail="call" href="#"><svg class="ic"><use href="#i-cal"/></svg>Book a 20-min call</a>
+      <!-- TODO(Kris): add WhatsApp number in international format, digits only, e.g. data-whatsapp="3706..." ; button stays hidden until set -->
+      <a class="btn btn-wa" id="waBtn" data-cta="whatsapp" data-whatsapp="TODO" href="#" hidden><svg class="ic"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="assets/img/exoclass-logo.svg" alt="ExoClass" width="120" height="22">
+    <p>© 2026 ExoClass · Lithuania · <a href="https://exoclass.io" data-cta="footer_io">exoclass.io</a></p>
+    <p class="small">Figures as of Oct 2026. Product views marked illustrative are mock-ups. Robotics Academy and BrAIn Club are founder-related companies.</p>
+    <p class="small">This page counts anonymous events without cookies. Microsoft Clarity runs only if you click “Allow”. <button type="button" class="linkbtn" id="consentOpen">Cookie choice</button></p>
+  </div>
+</footer>
+
+<!-- consent banner (rule 16): Clarity only after "Allow" -->
+<div class="consent" id="consent" role="dialog" aria-label="Cookie choice">
+  <p><b>Can we learn from your visit?</b> With your OK we turn on Microsoft Clarity (masked usage recordings) to improve this page. Without it we only count anonymous events, no cookies.</p>
+  <div class="row">
+    <button type="button" class="btn btn-sm" id="consentYes">Allow</button>
+    <button type="button" class="btn btn-sm btn-ghost" id="consentNo">Only essential</button>
+  </div>
+</div>
+
+</body>
+</html>
