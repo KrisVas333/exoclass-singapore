@@ -67,7 +67,9 @@ function hasGL() {
 }
 function fallback() { stage.classList.add('no3d'); stage.classList.remove('ready'); lastStep = -1; markSteps(); }
 
-if (reduce || !hasGL() || Q.get('no3d') === '1') {
+// 3D is desktop-only: phones (< 768 px) get the light still-image version, three.js never loads
+const PHONE = innerWidth < 768 && STILL === null;
+if (reduce || PHONE || !hasGL() || Q.get('no3d') === '1') {
   fallback();
 } else {
   markSteps();
@@ -93,13 +95,14 @@ async function boot() {
   const key = new THREE.DirectionalLight(0xffffff, 2.0); key.position.set(2.5, 4, 5); scene.add(key);
   const rim = new THREE.DirectionalLight(0x9fd0f2, 0.9); rim.position.set(-4, 1, -3); scene.add(rim);
 
-  const MAG = new THREE.Color('#AE4197'), BLUE = new THREE.Color('#3097D7');
+  // one mascot: coral octopus sampled from the Eight arms film (frame at 25 s): head #FB7865, highlight #F69F83
+  const CORAL = new THREE.Color('#FB7865'), CORAL_L = new THREE.Color('#F9A188'), CORAL_D = new THREE.Color('#EC6552');
 
-  // octopus (concept mascot): head with brand gradient, eyes, 8 bead arms in one instanced draw call
+  // octopus (same coral mascot as the Eight arms film): head gradient, eyes, 8 bead arms in one instanced draw call
   const oct = new THREE.Group(); scene.add(oct);
   const headGeo = new THREE.SphereGeometry(0.6, 48, 32);
   { const pos = headGeo.attributes.position, col = [], c = new THREE.Color();
-    for (let k = 0; k < pos.count; k++) { const t = clamp((pos.getY(k) + 0.6) / 1.2, 0, 1); c.copy(BLUE).lerp(MAG, sstep(0.05, 0.75, t)); col.push(c.r, c.g, c.b); }
+    for (let k = 0; k < pos.count; k++) { const t = clamp((pos.getY(k) + 0.6) / 1.2, 0, 1); c.copy(CORAL_D).lerp(CORAL_L, sstep(0.05, 0.95, t)); col.push(c.r, c.g, c.b); }
     headGeo.setAttribute('color', new THREE.Float32BufferAttribute(col, 3)); }
   const skin = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.42, metalness: 0 });
   const head = new THREE.Mesh(headGeo, skin); head.scale.set(1, 1.1, 0.95); head.position.y = 0.32; oct.add(head);
@@ -118,7 +121,7 @@ async function boot() {
 
   const NA = 8, NS = 28;
   const beads = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 14, 10), new THREE.MeshStandardMaterial({ roughness: 0.45 }), NA * NS);
-  { const c = new THREE.Color(); for (let a = 0; a < NA; a++) for (let s = 0; s < NS; s++) { c.copy(MAG).lerp(BLUE, (s / (NS - 1)) * 0.85); beads.setColorAt(a * NS + s, c); } }
+  { const c = new THREE.Color(); for (let a = 0; a < NA; a++) for (let s = 0; s < NS; s++) { c.copy(CORAL).lerp(CORAL_L, (s / (NS - 1)) * 0.7); beads.setColorAt(a * NS + s, c); } }
   oct.add(beads);
 
   // cards: front = today's tool, back = ExoClass job
