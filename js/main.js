@@ -6,7 +6,7 @@
   var CLARITY_ID = 'y4gk0je1j0'; // krisvas umbrella project, filter by URL
   var CONSENT_KEY = 'exo-sg-consent-v1';
   var MAIL_SUBJECT = 'ExoClass × Singapore';
-  var MAIL = { kris: 'kris@exoclass.lt', lukas: 'lukas@exoclass.lt' };
+  var MAIL = { kris: 'kristijonas.vasiliauskas@gmail.com', lukas: 'lukas.edu@exoclass.io' };
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
