@@ -51,6 +51,11 @@
     var sec = $('#video'); if (sec) sec.hidden = true; // never show a broken player
     $$('a[href="#video"]').forEach(function (a) { a.hidden = true; });
   }
+  var fa = $('#filmA');
+  if (fa) {
+    fa.addEventListener('play', function () { track('value', { what: 'filmA_play' }); }, { once: true });
+    fa.addEventListener('ended', function () { track('value', { what: 'filmA_end' }); }, { once: true });
+  }
 
   // ---------- client video (YouTube, loads only on click) ----------
   $$('.yt-link').forEach(function (b) {
